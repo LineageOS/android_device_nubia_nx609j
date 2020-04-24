@@ -79,5 +79,9 @@ PRODUCT_PACKAGES += \
     libstdc++.vendor \
     libpowermanager.vendor
 
+# Wifi
+PRODUCT_PACKAGES += \
+    WifiOverlay_nx609j
+
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/nubia/nx609j/nx609j-vendor.mk)
