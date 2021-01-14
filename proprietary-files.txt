@@ -68,7 +68,7 @@ lib/android.frameworks.displayservice@1.0.so:vendor/lib/android.frameworks.displ
 lib64/android.frameworks.displayservice@1.0.so:vendor/lib64/android.frameworks.displayservice@1.0.so
 
 # Camera - HAL
-vendor/lib/hw/camera.msm8998.so|55bdf4ebd5de9f91524d0582e349a183adbd6127
+vendor/lib/hw/camera.msm8998.so|253718051760ff42bd8935a55693eb5a2a308f3e
 vendor/lib/libmm-omxcore.so
 vendor/lib/libmm-qcamera.so
 vendor/lib/libmmjpeg_interface.so
@@ -86,7 +86,7 @@ lib/libarcsoft_low_light_shot.so:vendor/lib/libarcsoft_low_light_shot.so
 lib/libarcsoft_night_shot.so:vendor/lib/libarcsoft_night_shot.so
 lib/libmmcamera_nubiacustpro.so:vendor/lib/libmmcamera_nubiacustpro.so
 lib/libmpbase.so:vendor/lib/libmpbase.so
-lib/libnubia_effect.so:vendor/lib/libnubia_effect.so|fe163f37a0eebc81dadebf073c2ffea4db8c448c
+lib/libnubia_effect.so:vendor/lib/libnubia_effect.so|bfb562a80ce4af7b5965bcfe20c71a2c8bc3e16d
 lib/libnubia_runtime.so:vendor/lib/libnubia_runtime.so
 lib/libnubia_servers.so:vendor/lib/libnubia_servers.so
 lib/libnubiaconfig.so:vendor/lib/libnubiaconfig.so
@@ -115,7 +115,7 @@ lib64/libmpbase.so:vendor/lib64/libmpbase.so
 lib64/libmulti_exposure.so:vendor/lib64/libmulti_exposure.so
 lib64/libnubia_clone.so:vendor/lib64/libnubia_clone.so
 lib64/libnubia_delay_recorder.so:vendor/lib64/libnubia_delay_recorder.so
-lib64/libnubia_effect.so:vendor/lib64/libnubia_effect.so|f2cfdd7dbe36c01d842e3feb334d2aef3d974175
+lib64/libnubia_effect.so:vendor/lib64/libnubia_effect.so|7e099c46992d3b9f2b86b15da5cf86b2f9ee23d3
 lib64/libnubia_media_player.so:vendor/lib64/libnubia_media_player.so
 lib64/libnubia_runtime.so:vendor/lib64/libnubia_runtime.so
 lib64/libnubia_servers.so:vendor/lib64/libnubia_servers.so
