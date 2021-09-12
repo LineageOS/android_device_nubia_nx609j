@@ -73,9 +73,11 @@ PRODUCT_PACKAGES += \
 # Update this list with what each blob is actually for
 # libgui_vendor: libnubia_effect.so, camera.msm8998.so
 # libstdc++: camera.msm8998
+# libpowermanager.vendor: fingerprint.msm8998.so
 PRODUCT_PACKAGES += \
     libgui_vendor \
-    libstdc++.vendor
+    libstdc++.vendor \
+    libpowermanager.vendor
 
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/nubia/nx609j/nx609j-vendor.mk)
