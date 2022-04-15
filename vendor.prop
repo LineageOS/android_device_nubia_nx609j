@@ -1,3 +1,6 @@
+# Bluetooth
+bluetooth.device.default_name=Red Magic
+
 # Cabl
 ro.vendor.display.cabl=2
 
