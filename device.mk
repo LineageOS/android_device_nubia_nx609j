@@ -36,7 +36,7 @@ TARGET_SCREEN_WIDTH := 1080
 PRODUCT_PACKAGES += \
     libNubiaImageAlgorithm_shim \
     libfui \
-    libui_shim.vendor:32
+    libui_shim.vendor_32
 
 # Display configs
 PRODUCT_COPY_FILES += \
