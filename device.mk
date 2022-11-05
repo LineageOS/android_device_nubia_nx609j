@@ -54,9 +54,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/system-privapp-permissions-nubia.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-nubia.xml
 
-# Properties
--include $(LOCAL_PATH)/vendor_prop.mk
-
 # Ramdisk scripts
 PRODUCT_PACKAGES += \
     fstab.qcom

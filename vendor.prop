@@ -1,0 +1,10 @@
+# Cabl
+ro.vendor.display.cabl=2
+
+# Camera
+ro.total.camera.number=2
+
+# Thermal
+persist.sys.lcd.backlight.max=4095
+persist.vendor.product.perf=1
+ro.vendor.thermal.product=2
