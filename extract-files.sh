@@ -29,6 +29,9 @@ function blob_fixup() {
     vendor/lib64/libgf_hal.so)
         "${PATCHELF}" --remove-needed "libpowermanager.so" "${2}"
         ;;
+    vendor/lib64/libgoodixfingerprintd_binder.so)
+        "${PATCHELF}" --add-needed "libbinder_shim.so" "${2}"
+        ;;
     esac
 }
 
