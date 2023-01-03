@@ -463,7 +463,7 @@ vendor/lib64/vendor.goodix.hardware.fingerprint@1.0-service.so
 vendor/lib64/hw/fingerprint.goodix.so:vendor/lib64/hw/fingerprint.msm8998.so
 vendor/lib64/libgoodixfingerprintd_binder.so
 vendor/lib64/libgf_ca.so
-vendor/lib64/libgf_hal.so
+vendor/lib64/libgf_hal.so|7738bfafb59e61a0c72bad90af571d362dc6221d
 vendor/lib64/libqfp-service.so
 
 # Firmware - adreno
