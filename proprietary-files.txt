@@ -543,9 +543,9 @@ etc/.tp/.thermal-mode-02-05.conf:vendor/etc/.tp/.thermal-mode-02-05.conf
 # TP firmware
 vendor/firmware/nubia_tp_jdi_fw.img
 
-# VNDK -- android 11 build
-vendor/lib/libbinder.so|3b6b26f4497e8ef0ffac63e00f84dc9e2be884df
-vendor/lib64/libbinder.so|76c3176e018979ca4eb0e4dd76d3b385f131ca6e
+# VNDK -- android 13 build
+vendor/lib/libbinder.so|8fd38fd14e5ecbf00e74379209d6d7e4f16724a7
+vendor/lib64/libbinder.so|ac004decc72164211adcb7f4b33d9a0ee5024c07
 
 # Widevine
 vendor/lib/mediadrm/libwvdrmengine.so
