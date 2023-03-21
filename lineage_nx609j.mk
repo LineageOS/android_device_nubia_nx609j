@@ -14,20 +14,26 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/nubia/nx609j/full_nx609j.mk)
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
+
+# Inherit from nx609j device
+$(call inherit-product, device/nubia/nx609j/device.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
+# Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_nx609j
+PRODUCT_BRAND := Nubia
 PRODUCT_DEVICE := nx609j
-PRODUCT_MANUFACTURER := nubia
-PRODUCT_MODEL := NX609J
+PRODUCT_MANUFACTURER := Nubia
+PRODUCT_MODEL := Red Magic
 
 PRODUCT_GMS_CLIENTID_BASE := android-zte
 
-PRODUCT_BRAND := nubia
 TARGET_VENDOR := nubia
 TARGET_VENDOR_PRODUCT_NAME := NX609J
 TARGET_VENDOR_DEVICE_NAME := NX609J
