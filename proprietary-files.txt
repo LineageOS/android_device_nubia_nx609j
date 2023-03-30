@@ -559,6 +559,3 @@ vendor/firmware/nubia_tp_jdi_fw.img
 # VNDK -- android 13 build
 vendor/lib/libbinder.so|8fd38fd14e5ecbf00e74379209d6d7e4f16724a7
 vendor/lib64/libbinder.so|ac004decc72164211adcb7f4b33d9a0ee5024c07
-
-# Widevine
-vendor/lib/mediadrm/libwvdrmengine.so
