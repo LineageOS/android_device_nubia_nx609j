@@ -50,6 +50,10 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/display/qdcm_calib_data_jdi_td4310_1080_2160_5p99_video_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_jdi_td4310_1080_2160_5p99_video_dsi_panel.xml
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1-service
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.nx609j
