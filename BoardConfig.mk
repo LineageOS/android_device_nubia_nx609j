@@ -38,7 +38,7 @@ BOARD_VENDORIMAGE_PARTITION_SIZE := 838860800
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/recovery.fstab
 
 # Tap-to-wake
-TARGET_TAP_TO_WAKE_NODE := "/sys/class/input/input4/wake_gesture"
+TARGET_TAP_TO_WAKE_NODE := "/sys/devices/soc/c179000.i2c/i2c-5/5-004b/input/input1/wake_gesture"
 
 # Display
 TARGET_SCREEN_DENSITY := 480

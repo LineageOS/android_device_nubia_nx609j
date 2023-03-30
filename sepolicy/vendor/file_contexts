@@ -13,3 +13,6 @@
 
 # Proximity
 /sys/devices/virtual/proximity/proximity(/.*)?                                                                  u:object_r:sysfs_proximity_sensor:s0
+
+# Touchscreen
+/sys/devices/soc/c179000\.i2c/i2c-5/5-[0-9a-f]+/input/input[0-9]+/wake_gesture 		                                u:object_r:sysfs_sectouch:s0
