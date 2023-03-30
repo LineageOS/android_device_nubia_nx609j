@@ -26,4 +26,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.lcd.backlight.max=4095 \
     persist.vendor.product.perf=1 \
-    ro.vendor.thermal.product=0
+    ro.vendor.thermal.product=2
