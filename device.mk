@@ -51,7 +51,7 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Display configs
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/display/qdcm_calib_data_jdi_r63452_1080p_5p5_mipi_cmd_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_jdi_r63452_1080p_5p5_mipi_cmd_panel.xml
+    $(LOCAL_PATH)/display/qdcm_calib_data_jdi_td4310_1080_2160_5p99_video_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_jdi_td4310_1080_2160_5p99_video_dsi_panel.xml
 
 # Lights
 PRODUCT_PACKAGES += \
