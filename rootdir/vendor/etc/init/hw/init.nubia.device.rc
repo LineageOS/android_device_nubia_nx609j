@@ -29,10 +29,6 @@
 import /vendor/etc/init/hw/init.nubia.touch.lcd.rc
 
 on post-fs-data
-    #add device for IRControl
-    chown system system /sys/class/ir_remote/ir_remote/enable
-    chmod 0644 /sys/class/ir_remote/ir_remote/enable
-
     chown system system /dev/ttyMSM1
     chmod 0664 /dev/ttyMSM1
 
