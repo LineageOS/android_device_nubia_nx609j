@@ -17,8 +17,5 @@
 # Light sensor
 /sys/devices/virtual/light/light(/.*)?                                                                          u:object_r:sysfs_light_sensor:s0
 
-# Lineage hardware
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.nx609j                                      u:object_r:hal_lineage_touch_default_exec:s0
-
 # Proximity
 /sys/devices/virtual/proximity/proximity(/.*)?                                                                  u:object_r:sysfs_proximity_sensor:s0

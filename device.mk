@@ -75,10 +75,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.nx609j
 
-# Lineage hardware
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.nx609j
-
 # Properties
 -include $(LOCAL_PATH)/vendor_prop.mk
 

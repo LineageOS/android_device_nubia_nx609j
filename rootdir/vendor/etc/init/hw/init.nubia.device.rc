@@ -40,11 +40,6 @@ on post-fs-data
     chown system system /sys/devices/soc/c179000.i2c/i2c-5/5-0020/input/input4/wake_gesture
     chmod 0644 /sys/devices/soc/c179000.i2c/i2c-5/5-0020/input/input4/wake_gesture
 
-    # 0dbutton
-    chown system system /sys/devices/soc/c179000.i2c/i2c-5/5-0020/input/input4/0dbutton
-    chmod 0644 /sys/devices/soc/c179000.i2c/i2c-5/5-0020/input/input4/0dbutton
-
     # Reversed keys
     chown system system /sys/devices/soc/c179000.i2c/i2c-5/5-0020/input/input4/reversed_keys
     chmod 0644 /sys/devices/soc/c179000.i2c/i2c-5/5-0020/input/input4/reversed_keys
-
