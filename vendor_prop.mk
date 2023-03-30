@@ -20,7 +20,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.total.camera.number=3
+    ro.total.camera.number=2
 
 # Thermal
 PRODUCT_PROPERTY_OVERRIDES += \
