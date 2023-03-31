@@ -523,6 +523,32 @@ etc/firmware/aw22xxx_cfg_e.bin:vendor/etc/firmware/aw22xxx_cfg_e.bin
 etc/firmware/aw22xxx_cfg_f.bin:vendor/etc/firmware/aw22xxx_cfg_f.bin
 etc/firmware/aw22xxx_fw.bin:vendor/etc/firmware/aw22xxx_fw.bin
 
+# Gatekeeper
+lib/libgatekeeper.so:vendor/lib/libgatekeeper.so
+lib64/libgatekeeper.so:vendor/lib64/libgatekeeper.so
+lib64/android.hardware.gatekeeper@1.0.so:vendor/lib64/android.hardware.gatekeeper@1.0.so
+vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
+vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
+vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
+vendor/lib/hw/gatekeeper.msm8998.so
+vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
+vendor/lib64/hw/gatekeeper.msm8998.so
+
+# Keymaster
+vendor/bin/hw/android.hardware.keymaster@3.0-service-qti
+vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc
+vendor/lib/hw/android.hardware.keymaster@3.0-impl-qti.so
+vendor/lib/libkeymasterutils.so
+vendor/lib/libkeymasterprovision.so
+vendor/lib/libkeymasterdeviceutils.so
+vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so
+vendor/lib64/libkeymasterutils.so
+vendor/lib64/libkeymasterprovision.so
+vendor/lib64/libkeymasterdeviceutils.so
+
+# Keystore
+vendor/lib64/hw/keystore.msm8998.so
+
 # Thermal nubia config
 etc/.tp/.thermal-mode-00-01.conf:vendor/etc/.tp/.thermal-mode-00-01.conf
 etc/.tp/.thermal-mode-00-02.conf:vendor/etc/.tp/.thermal-mode-00-02.conf
