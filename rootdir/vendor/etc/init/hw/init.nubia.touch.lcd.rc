@@ -32,7 +32,7 @@ on post-fs-data
     mkdir /data/vendor/tp 0775 system system
     mkdir /data/vendor/tp/debug 0775 system system
     rm /data/vendor/tp/ic_ver
-    rm /data/vendor/tp/reset 0
+    rm /data/vendor/tp/reset
     rm /data/vendor/tp/ic_detect
     rm /data/vendor/tp/start_update
     rm /data/vendor/tp/easy_wakeup_gesture
