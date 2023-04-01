@@ -1,3 +1,6 @@
+# Drv2605
+type haptics_device, dev_type;
+
 # Fingerprint (fpdsensor)
 type fpdsensor_data_file, file_type, core_data_file_type, data_file_type;
 
