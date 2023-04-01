@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The LineageOS Project
+ * Copyright (C) 2018 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,12 +24,6 @@
 #include <mutex>
 #include <vector>
 
-// Events
-#define ONGOING_NONE             0
-#define ONGOING_NOTIFICATION    (1 << 0)
-#define ONGOING_BUTTONS         (1 << 1)
-#define ONGOING_ATTENTION       (1 << 2)
-
 using ::android::hardware::Return;
 using ::android::hardware::Void;
 using ::android::hardware::light::V2_0::Flash;
@@ -37,21 +31,6 @@ using ::android::hardware::light::V2_0::ILight;
 using ::android::hardware::light::V2_0::LightState;
 using ::android::hardware::light::V2_0::Status;
 using ::android::hardware::light::V2_0::Type;
-
-/**
- * battery defs
- */
-
-enum battery_status {
-    BATTERY_UNKNOWN = 0,
-    BATTERY_LOW,
-    BATTERY_FREE,
-    BATTERY_CHARGING,
-    BATTERY_FULL,
-};
-
-static int g_ongoing = ONGOING_NONE;
-static int g_battery = BATTERY_UNKNOWN;
 
 typedef void (*LightStateHandler)(const LightState&);
 
