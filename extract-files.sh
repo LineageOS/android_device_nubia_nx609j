@@ -22,6 +22,7 @@ function blob_fixup() {
     vendor/lib/hw/camera.msm8998.so)
         sed -i "s|libgui.so|libfui.so|g" "${2}"
         patchelf --remove-needed "libandroid.so" "${2}"
+        patchelf --remove-needed "android.hidl.base@1.0.so" "${2}"
         ;;
     vendor/lib/libnubia_effect.so | vendor/lib64/libnubia_effect.so)
         sed -i "s|libgui.so|libfui.so|g" "${2}"
