@@ -543,5 +543,9 @@ etc/.tp/.thermal-mode-02-05.conf:vendor/etc/.tp/.thermal-mode-02-05.conf
 # TP firmware
 vendor/firmware/nubia_tp_jdi_fw.img
 
+# VNDK
+vendor/lib64/libbinder.so|8ed9aabf6e2ace4963b1e173dab6dffef8c98d2c
+vendor/lib64/libbinderthreadstate.so|95d395e22d11c24986174a52a490e5e6bb34d440
+
 # Widevine
 vendor/lib/mediadrm/libwvdrmengine.so
