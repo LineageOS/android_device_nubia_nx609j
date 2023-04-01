@@ -53,6 +53,16 @@
 #define MAX_LED_BRIGHTNESS    255
 #define MAX_LCD_BRIGHTNESS    4095
 
+
+#define BACK_LED_EFFECT_FILE      "/sys/class/leds/aw22xxx_led/effect"
+#define BACK_LED_BRIGHTNESS_FILE  "/sys/class/leds/aw22xxx_led/brightness"
+#define BACK_LED_IMAX_FILE        "/sys/class/leds/aw22xxx_led/imax"
+#define BACK_LED_EFFECT_OFF 0
+#define BACK_LED_EFFECT_GREEN_GLOW 2
+#define BACK_LED_EFFECT_BLUE_STRIP_FAST 22
+#define BACK_LED_EFFECT_GREEN_STRIPE_FAST 40
+#define BACK_LED_EFFECT_RAINBOW_FAST 80
+
 static int32_t active_status = 0;
 
 enum battery_status {
@@ -201,6 +211,11 @@ static uint32_t setBreathLightLocked(uint32_t event_source, const LightState& st
         set(NUBIA_LED_MODE, BLINK_MODE_OFF);
         set(NUBIA_FADE, "0 0 0");
         set(NUBIA_GRADE, "100 255");
+
+        set(BACK_LED_EFFECT_FILE, BACK_LED_EFFECT_OFF);
+        set(BACK_LED_IMAX_FILE, 0);
+        set(BACK_LED_BRIGHTNESS_FILE, BACK_LED_EFFECT_OFF);
+
         return 0;
     }
 
@@ -211,11 +226,17 @@ static uint32_t setBreathLightLocked(uint32_t event_source, const LightState& st
             set(NUBIA_FADE, "0 0 0");
             set(NUBIA_GRADE, "100 255");
             set(NUBIA_LED_MODE, BLINK_MODE_CONST);
+            set(BACK_LED_BRIGHTNESS_FILE, MAX_LED_BRIGHTNESS);
+            set(BACK_LED_IMAX_FILE, 4);
+            set(BACK_LED_EFFECT_FILE, BACK_LED_EFFECT_RAINBOW_FAST);
         }else if (battery_state == BATTERY_FULL){
             set(NUBIA_LED_COLOR, NUBIA_LED_GREEN);
             set(NUBIA_FADE, "0 0 0");
             set(NUBIA_GRADE, "100 255");
             set(NUBIA_LED_MODE, BLINK_MODE_CONST);
+            set(BACK_LED_BRIGHTNESS_FILE, MAX_LED_BRIGHTNESS);
+            set(BACK_LED_IMAX_FILE, 8);
+            set(BACK_LED_EFFECT_FILE, BACK_LED_EFFECT_GREEN_GLOW);
         }
 
         return 0;
@@ -271,6 +292,9 @@ static uint32_t setBreathLightLocked(uint32_t event_source, const LightState& st
         set(NUBIA_FADE, fade_params);
         set(NUBIA_GRADE, "0 100");
         set(NUBIA_LED_MODE, BLINK_MODE_ON);
+        set(BACK_LED_BRIGHTNESS_FILE, MAX_LED_BRIGHTNESS);
+        set(BACK_LED_IMAX_FILE, 8);
+        set(BACK_LED_EFFECT_FILE, BACK_LED_EFFECT_GREEN_STRIPE_FAST);
     }
     return 0;
 }
