@@ -11,7 +11,7 @@ on init
     chown system system /sys/class/leds/nubia_led/outn
     chmod 0644 /sys/class/leds/nubia_led/outn
 
-service vendor.light-hal-2-0 /vendor/bin/hw/android.hardware.light@2.0-service.nx563j
+service vendor.light-hal-2-0 /vendor/bin/hw/android.hardware.light@2.0-service.nx609j
     class hal
     user system
     group system

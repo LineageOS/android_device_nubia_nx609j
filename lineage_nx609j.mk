@@ -14,26 +14,26 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/nubia/nx563j/full_nx563j.mk)
+$(call inherit-product, device/nubia/nx609j/full_nx609j.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_nx563j
-PRODUCT_DEVICE := nx563j
+PRODUCT_NAME := lineage_nx609j
+PRODUCT_DEVICE := nx609j
 PRODUCT_MANUFACTURER := nubia
-PRODUCT_MODEL := NX563J
+PRODUCT_MODEL := NX609J
 
 PRODUCT_GMS_CLIENTID_BASE := android-zte
 
 PRODUCT_BRAND := nubia
 TARGET_VENDOR := nubia
-TARGET_VENDOR_PRODUCT_NAME := NX563J
-TARGET_VENDOR_DEVICE_NAME := NX563J
+TARGET_VENDOR_PRODUCT_NAME := NX609J
+TARGET_VENDOR_DEVICE_NAME := NX609J
 
-PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=NX563J PRODUCT_NAME=NX563J
+PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=NX609J PRODUCT_NAME=NX609J
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="NX563J-user 7.1.1 NMF26X eng.nubia.20181008.160254 release-keys"
+    PRIVATE_BUILD_DESC="NX609J-user 7.1.1 NMF26X eng.nubia.20181008.160254 release-keys"
 
-BUILD_FINGERPRINT := nubia/NX563J/NX563J:7.1.1/NMF26X/eng.nubia.20171019.101529:user/release-keys
+BUILD_FINGERPRINT := nubia/NX609J/NX609J:7.1.1/NMF26X/eng.nubia.20171019.101529:user/release-keys

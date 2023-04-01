@@ -47,7 +47,7 @@ fi
 set -e
 
 # Required!
-export DEVICE=nx563j
+export DEVICE=nx609j
 export DEVICE_COMMON=msm8998-common
 export VENDOR=nubia
 

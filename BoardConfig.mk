@@ -17,17 +17,17 @@
 # Inherit from common msm8998-common
 include device/nubia/msm8998-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/nubia/nx563j
+DEVICE_PATH := device/nubia/nx609j
 
 # OTA Assert
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
-TARGET_OTA_ASSERT_DEVICE := NX563J,nx563j
+TARGET_OTA_ASSERT_DEVICE := NX609J,nx609j
 
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Kernel
-TARGET_KERNEL_CONFIG := lineageos_nx563j_defconfig
+TARGET_KERNEL_CONFIG := lineageos_nx609j_defconfig
 
 # Partitions
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
@@ -48,4 +48,4 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # inherit from the proprietary version
-include vendor/nubia/nx563j/BoardConfigVendor.mk
+include vendor/nubia/nx609j/BoardConfigVendor.mk

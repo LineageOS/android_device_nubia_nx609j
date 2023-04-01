@@ -15,9 +15,9 @@
 cc_binary {
     relative_install_path: "hw",
     defaults: ["hidl_defaults"],
-    name: "android.hardware.light@2.0-service.nx563j",
+    name: "android.hardware.light@2.0-service.nx609j",
     proprietary: true,
-    init_rc: ["android.hardware.light@2.0-service.nx563j.rc"],
+    init_rc: ["android.hardware.light@2.0-service.nx609j.rc"],
     srcs: ["service.cpp", "Light.cpp"],
     shared_libs: [
         "libhardware",
