@@ -45,10 +45,6 @@ PRODUCT_PACKAGES += \
     libfui \
     libui_shim.vendor:32
 
-# ConfigPanel
-PRODUCT_PACKAGES += \
-    ConfigPanel
-
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
