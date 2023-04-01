@@ -57,6 +57,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.nx609j
 
+# Permissions
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/system-privapp-permissions-nubia.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-nubia.xml
+
 # Properties
 -include $(LOCAL_PATH)/vendor_prop.mk
 
