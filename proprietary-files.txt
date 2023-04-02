@@ -452,19 +452,14 @@ vendor/lib64/libvideoutils.so
 # Fingerprint -sensor
 framework/vendor.qti.hardware.fingerprint-V1.0-java.jar:vendor/framework/vendor.qti.hardware.fingerprint-V1.0-java.jar
 vendor/bin/qfp-daemon
-vendor/etc/init/vendor.goodix.hardware.fingerprint.rc
-vendor/lib/libgoodixfingerprintd_binder.so
-vendor/lib/vendor.goodix.hardware.fingerprint@1.0.so
-vendor/lib/vendor.goodix.hardware.fingerprint@1.0-service.so
-vendor/lib/hw/fingerprint.goodix.so:vendor/lib/hw/fingerprint.msm8998.so
-vendor/lib64/libgoodixfingerprintd_binder.so
-vendor/lib64/vendor.goodix.hardware.fingerprint@1.0.so
-vendor/lib64/vendor.goodix.hardware.fingerprint@1.0-service.so
 vendor/lib64/hw/fingerprint.goodix.so:vendor/lib64/hw/fingerprint.msm8998.so
-vendor/lib64/libgoodixfingerprintd_binder.so
 vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so|7738bfafb59e61a0c72bad90af571d362dc6221d
+vendor/lib64/libgoodixfingerprintd_binder.so
 vendor/lib64/libqfp-service.so
+vendor/lib64/vendor.goodix.hardware.fingerprint@1.0.so
+vendor/lib64/vendor.goodix.hardware.fingerprint@1.0-service.so
+vendor/etc/init/vendor.goodix.hardware.fingerprint.rc
 
 # Firmware - adreno
 vendor/firmware/leia_pfp_470.fw
@@ -524,23 +519,15 @@ etc/firmware/aw22xxx_cfg_f.bin:vendor/etc/firmware/aw22xxx_cfg_f.bin
 etc/firmware/aw22xxx_fw.bin:vendor/etc/firmware/aw22xxx_fw.bin
 
 # Gatekeeper
-lib/libgatekeeper.so:vendor/lib/libgatekeeper.so
-lib64/libgatekeeper.so:vendor/lib64/libgatekeeper.so
 lib64/android.hardware.gatekeeper@1.0.so:vendor/lib64/android.hardware.gatekeeper@1.0.so
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
-vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
-vendor/lib/hw/gatekeeper.msm8998.so
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib64/hw/gatekeeper.msm8998.so
 
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@3.0-service-qti
 vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc
-vendor/lib/hw/android.hardware.keymaster@3.0-impl-qti.so
-vendor/lib/libkeymasterutils.so
-vendor/lib/libkeymasterprovision.so
-vendor/lib/libkeymasterdeviceutils.so
 vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so
 vendor/lib64/libkeymasterutils.so
 vendor/lib64/libkeymasterprovision.so
