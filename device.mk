@@ -71,11 +71,9 @@ PRODUCT_PACKAGES += \
 # Update this list with what each blob is actually for
 # libgui_vendor: libnubia_effect.so, camera.msm8998.so
 # libstdc++: camera.msm8998
-# libpowermanager.vendor: fingerprint.msm8998.so
 PRODUCT_PACKAGES += \
     libgui_vendor \
-    libstdc++.vendor \
-    libpowermanager.vendor
+    libstdc++.vendor
 
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libbinderthreadstate.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbinderthreadstate.so
