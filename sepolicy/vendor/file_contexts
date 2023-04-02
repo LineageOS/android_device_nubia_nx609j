@@ -1,7 +1,11 @@
-# Fingerprint
-/dev/fpc                                                                                                        u:object_r:fingerprint_device:s0
-/sys/devices/soc/1.fpc1020(/.*)?                                                                                u:object_r:sysfs_fingerprint:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint\.fpc@2\.1-service                     u:object_r:hal_fingerprint_default_exec:s0
+# Fingerprint (goodix)
+/data/gf_data(/.*)?                                                  u:object_r:fingerprintd_data_file:s0
+/data/vendor/gf_data(/.*)?                                           u:object_r:fingerprint_vendor_data_file:s0
+/data/vendor/goodix(/.*)?                                            u:object_r:fingerprint_vendor_data_file:s0
+/dev/goodix_fp                                                       u:object_r:fingerprint_device:s0
+
+# Fingerprint (fpdsensor)
+/data/fpdsensor(/.*)?		                                    u:object_r:fpdsensor_data_file:s0
 
 # Light HAL
 /sys/class/leds(/.*)?                                                                                           u:object_r:sysfs_leds:s0
