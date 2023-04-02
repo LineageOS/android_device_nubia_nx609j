@@ -68,7 +68,7 @@ lib/android.frameworks.displayservice@1.0.so:vendor/lib/android.frameworks.displ
 lib64/android.frameworks.displayservice@1.0.so:vendor/lib64/android.frameworks.displayservice@1.0.so
 
 # Camera - HAL
-vendor/lib/hw/camera.msm8998.so
+vendor/lib/hw/camera.msm8998.so|55bdf4ebd5de9f91524d0582e349a183adbd6127
 vendor/lib/libmm-omxcore.so
 vendor/lib/libmm-qcamera.so
 vendor/lib/libmmjpeg_interface.so
@@ -77,7 +77,7 @@ vendor/lib/libqomx_core.so
 
 # Camera
 lib/libArcsoftPrettyAlgorithm.so:vendor/lib/libArcsoftPrettyAlgorithm.so
-lib/libNubiaImageAlgorithm.so:vendor/lib/libNubiaImageAlgorithm.so
+lib/libNubiaImageAlgorithm.so:vendor/lib/libNubiaImageAlgorithm.so|e65a2af5b75ce2a4e4295c2b8fefef80cce5662e
 lib/libarcsoft_beautyshot.so:vendor/lib/libarcsoft_beautyshot.so
 lib/libarcsoft_beautyshot_image_algorithm.so:vendor/lib/libarcsoft_beautyshot_image_algorithm.so
 lib/libarcsoft_beautyshot_ph.so:vendor/lib/libarcsoft_beautyshot_ph.so
@@ -86,7 +86,7 @@ lib/libarcsoft_low_light_shot.so:vendor/lib/libarcsoft_low_light_shot.so
 lib/libarcsoft_night_shot.so:vendor/lib/libarcsoft_night_shot.so
 lib/libmmcamera_nubiacustpro.so:vendor/lib/libmmcamera_nubiacustpro.so
 lib/libmpbase.so:vendor/lib/libmpbase.so
-lib/libnubia_effect.so:vendor/lib/libnubia_effect.so
+lib/libnubia_effect.so:vendor/lib/libnubia_effect.so|fe163f37a0eebc81dadebf073c2ffea4db8c448c
 lib/libnubia_runtime.so:vendor/lib/libnubia_runtime.so
 lib/libnubia_servers.so:vendor/lib/libnubia_servers.so
 lib/libnubiaconfig.so:vendor/lib/libnubiaconfig.so
@@ -115,7 +115,7 @@ lib64/libmpbase.so:vendor/lib64/libmpbase.so
 lib64/libmulti_exposure.so:vendor/lib64/libmulti_exposure.so
 lib64/libnubia_clone.so:vendor/lib64/libnubia_clone.so
 lib64/libnubia_delay_recorder.so:vendor/lib64/libnubia_delay_recorder.so
-lib64/libnubia_effect.so:vendor/lib64/libnubia_effect.so
+lib64/libnubia_effect.so:vendor/lib64/libnubia_effect.so|f2cfdd7dbe36c01d842e3feb334d2aef3d974175
 lib64/libnubia_media_player.so:vendor/lib64/libnubia_media_player.so
 lib64/libnubia_runtime.so:vendor/lib64/libnubia_runtime.so
 lib64/libnubia_servers.so:vendor/lib64/libnubia_servers.so
@@ -132,7 +132,7 @@ vendor/lib/libSonyIMX318PdafLibrary.so
 vendor/lib/libalarmservice_jni.so
 vendor/lib/libalsautils.so
 vendor/lib/libarcsoft_high_dynamic_range.so
-vendor/lib/libarcsoft_picauto.so
+vendor/lib/libarcsoft_picauto.so|c7df1839cf8533155bfcb95b4c73e0c68df0c7a3
 vendor/lib/libcdsprpc.so
 vendor/lib/libdepthmapwrapper.so
 vendor/lib/libflash_pmic.so
