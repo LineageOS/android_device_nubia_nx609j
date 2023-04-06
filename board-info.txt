@@ -1,2 +1,2 @@
-require version-modem=2019-01-12 00:16:30
-require version-firmware=2.36
+require version-modem=2021-04-21 03:50:58
+require version-firmware=3.33
