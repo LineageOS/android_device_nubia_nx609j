@@ -28,6 +28,13 @@
 
 import /vendor/etc/init/hw/init.nubia.touch.lcd.rc
 
+on charger
+    write /sys/class/leds/nubia_led/outn            "48"
+    write /sys/class/leds/nubia_led/fade_parameter  "0 0 0"
+    write /sys/class/leds/nubia_led/grade_parameter "100 255"
+    write /sys/class/leds/nubia_led/blink_mode      "1"
+    write /sys/class/leds/aw22xxx_led/imax          "0x0f"
+    write /sys/class/leds/aw22xxx_led/effect        "0x08"
 
 on post-fs-data
     chown system system /dev/ttyMSM1
