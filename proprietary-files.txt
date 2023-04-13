@@ -31,7 +31,6 @@ vendor/etc/acdbdata/QRD/msm8998-skuk-tavil-snd-card/QRD_SKUK_WCD9340_workspaceFi
 etc/firmware/tas2555_uCDSP.bin:vendor/firmware/tas2555_uCDSP.bin
 
 # Alipay
-vendor/lib/libteeclientjni.so
 vendor/lib64/libteeclientjni.so
 
 # IFAA
@@ -359,7 +358,6 @@ vendor/lib64/hw/fingerprint.goodix.so:vendor/lib64/hw/fingerprint.msm8998.so
 vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so|7738bfafb59e61a0c72bad90af571d362dc6221d
 vendor/lib64/libgoodixfingerprintd_binder.so|74a9d04c7d217797fa122c497fd54fb1666dafbb
-vendor/lib64/libqfp-service.so
 vendor/lib64/vendor.goodix.hardware.fingerprint@1.0.so
 vendor/lib64/vendor.goodix.hardware.fingerprint@1.0-service.so
 vendor/etc/init/vendor.goodix.hardware.fingerprint.rc
