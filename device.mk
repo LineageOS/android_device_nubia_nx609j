@@ -34,6 +34,8 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Camera
 PRODUCT_PACKAGES += \
+    android.frameworks.displayservice@1.0_32 \
+    android.frameworks.displayservice@1.0.vendor \
     libNubiaImageAlgorithm_shim \
     libui_shim.vendor_32
 
