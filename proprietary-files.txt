@@ -72,7 +72,6 @@ vendor/lib/libmmlib2d_interface.so
 vendor/lib/libqomx_core.so
 
 # Camera
-lib/libArcsoftPrettyAlgorithm.so:vendor/lib/libArcsoftPrettyAlgorithm.so
 lib/libNubiaImageAlgorithm.so:vendor/lib/libNubiaImageAlgorithm.so|e65a2af5b75ce2a4e4295c2b8fefef80cce5662e
 lib/libarcsoft_beautyshot.so:vendor/lib/libarcsoft_beautyshot.so
 lib/libarcsoft_beautyshot_image_algorithm.so:vendor/lib/libarcsoft_beautyshot_image_algorithm.so
@@ -83,53 +82,19 @@ lib/libarcsoft_night_shot.so:vendor/lib/libarcsoft_night_shot.so
 lib/libmmcamera_nubiacustpro.so:vendor/lib/libmmcamera_nubiacustpro.so
 lib/libmpbase.so:vendor/lib/libmpbase.so
 lib/libnubia_effect.so:vendor/lib/libnubia_effect.so|bfb562a80ce4af7b5965bcfe20c71a2c8bc3e16d
-lib/libnubia_runtime.so:vendor/lib/libnubia_runtime.so
-lib/libnubia_servers.so:vendor/lib/libnubia_servers.so
-lib/libnubiaconfig.so:vendor/lib/libnubiaconfig.so
-lib/libnubiamtp.so:vendor/lib/libnubiamtp.so
 
-lib64/libAlgorithm.so:vendor/lib64/libAlgorithm.so
-lib64/libAltek_Alignment.so:vendor/lib64/libAltek_Alignment.so
-lib64/libArcsoftAlgorithm.so:vendor/lib64/libArcsoftAlgorithm.so
-lib64/libBigAperture.so:vendor/lib64/libBigAperture.so
-lib64/libBuffer.so:vendor/lib64/libBuffer.so
-lib64/libDualCamera_Calibration.so:vendor/lib64/libDualCamera_Calibration.so
-lib64/libIndependenceUtil.so:vendor/lib64/libIndependenceUtil.so
-lib64/libNubiaFaceClassify.so:vendor/lib64/libNubiaFaceClassify.so
 lib64/libNubiaImageAlgorithm.so:vendor/lib64/libNubiaImageAlgorithm.so
-lib64/libPrettyWaterMark.so:vendor/lib64/libPrettyWaterMark.so
 lib64/libarcsoft_beautyshot.so:vendor/lib64/libarcsoft_beautyshot.so
 lib64/libarcsoft_beautyshot_image_algorithm.so:vendor/lib64/libarcsoft_beautyshot_image_algorithm.so
 lib64/libarcsoft_beautyshot_video_algorithm.so:vendor/lib64/libarcsoft_beautyshot_video_algorithm.so
 lib64/libarcsoft_low_light_shot.so:vendor/lib64/libarcsoft_low_light_shot.so
 lib64/libarcsoft_night_shot.so:vendor/lib64/libarcsoft_night_shot.so
-lib64/libbuffer_manager.so:vendor/lib64/libbuffer_manager.so
-lib64/libdngcreator.so:vendor/lib64/libdngcreator.so
-lib64/libhistutil.so:vendor/lib64/libhistutil.so
-lib64/libmorpho_panorama_gp.so:vendor/lib64/libmorpho_panorama_gp.so
 lib64/libmpbase.so:vendor/lib64/libmpbase.so
-lib64/libmulti_exposure.so:vendor/lib64/libmulti_exposure.so
-lib64/libnubia_clone.so:vendor/lib64/libnubia_clone.so
-lib64/libnubia_delay_recorder.so:vendor/lib64/libnubia_delay_recorder.so
 lib64/libnubia_effect.so:vendor/lib64/libnubia_effect.so|7e099c46992d3b9f2b86b15da5cf86b2f9ee23d3
-lib64/libnubia_media_player.so:vendor/lib64/libnubia_media_player.so
-lib64/libnubia_runtime.so:vendor/lib64/libnubia_runtime.so
-lib64/libnubia_servers.so:vendor/lib64/libnubia_servers.so
-lib64/libnubia_trajectory.so:vendor/lib64/libnubia_trajectory.so
-lib64/libnubiaconfig.so:vendor/lib64/libnubiaconfig.so
-lib64/libnubiafilescanner.so:vendor/lib64/libnubiafilescanner.so
-lib64/libnubiajpeg.so:vendor/lib64/libnubiajpeg.so
-lib64/libnubiamtp.so:vendor/lib64/libnubiamtp.so
-lib64/libpanoramahelper.so:vendor/lib64/libpanoramahelper.so
-lib64/libproductinfo.so:vendor/lib64/libproductinfo.so
 
-vendor/lib/libAlacSwDec.so
 vendor/lib/libSonyIMX318PdafLibrary.so
-vendor/lib/libalarmservice_jni.so
-vendor/lib/libalsautils.so
 vendor/lib/libarcsoft_high_dynamic_range.so
 vendor/lib/libarcsoft_picauto.so|c7df1839cf8533155bfcb95b4c73e0c68df0c7a3
-vendor/lib/libcdsprpc.so
 vendor/lib/libdepthmapwrapper.so
 vendor/lib/libflash_pmic.so
 vendor/lib/libhal_dbg.so
@@ -139,16 +104,11 @@ vendor/lib/libjpegehw.so
 vendor/lib/libmmjpeg.so
 vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libmmqjpegdma.so
-vendor/lib/libois_lc898122.so
 vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc.so
 vendor/lib/libqomx_jpegenc_pipe.so
 vendor/lib/libremosaic_daemon.so
 
-vendor/lib64/libAlacSwDec.so
-vendor/lib64/libalarmservice_jni.so
-vendor/lib64/libalsautils.so
-vendor/lib64/libcdsprpc.so
 vendor/lib64/libmm-omxcore.so
 
 # Camera - actuators
@@ -391,59 +351,6 @@ vendor/lib64/libmmcamera2_stats_lib.so
 # Camera - OIS
 vendor/lib/libois_bu63165.so
 vendor/lib/libois_lc898122.so
-
-# Camera - nubia specific
-vendor/lib/libarcsoft_high_dynamic_range.so
-vendor/lib/libdepthmapwrapper.so
-vendor/lib/libflash_pmic.so
-vendor/lib/libhal_dbg.so
-vendor/lib/libhdr_tm.so
-vendor/lib/libjpegdhw.so
-vendor/lib/libjpegdmahw.so
-vendor/lib/libjpegehw.so
-vendor/lib/libmmjpeg.so
-vendor/lib/libmmqjpeg_codec.so
-vendor/lib/libmmqjpeg_codec.so
-vendor/lib/libmmqjpegdma.so
-vendor/lib/libmmqjpegdma.so
-vendor/lib/libqomx_jpegdec.so
-vendor/lib/libqomx_jpegdec.so
-vendor/lib/libqomx_jpegenc.so
-vendor/lib/libqomx_jpegenc.so
-vendor/lib/libqomx_jpegenc_pipe.so
-vendor/lib/libqomx_jpegenc_pipe.so
-vendor/lib/libremosaic_daemon.so
-vendor/lib/libremosaic_daemon.so
-vendor/lib/libscveBlobDescriptor.so
-vendor/lib/libscveBlobDescriptor_stub.so
-vendor/lib/libscveCommon.so
-vendor/lib/libscveCommon_stub.so
-vendor/lib/libscveFaceLandmarks.so
-vendor/lib/libscveFaceRecognition.so
-vendor/lib/libscveObjectSegmentation.so
-vendor/lib/libscveObjectTracker.so
-vendor/lib/libscveObjectTracker_stub.so
-vendor/lib/libscvePanorama.so
-vendor/lib/libscvePanorama_lite.so
-vendor/lib/libvideoutils.so
-vendor/lib/libvideoutils.so
-
-vendor/lib64/libcdsprpc.so
-vendor/lib64/libhdr_tm.so
-vendor/lib64/libhdr_tm.so
-vendor/lib64/libscveBlobDescriptor.so
-vendor/lib64/libscveBlobDescriptor_stub.so
-vendor/lib64/libscveCommon.so
-vendor/lib64/libscveCommon_stub.so
-vendor/lib64/libscveFaceLandmarks.so
-vendor/lib64/libscveFaceRecognition.so
-vendor/lib64/libscveObjectSegmentation.so
-vendor/lib64/libscveObjectTracker.so
-vendor/lib64/libscveObjectTracker_stub.so
-vendor/lib64/libscvePanorama.so
-vendor/lib64/libscvePanorama_lite.so
-vendor/lib64/libvideoutils.so
-vendor/lib64/libvideoutils.so
 
 # Fingerprint -sensor
 framework/vendor.qti.hardware.fingerprint-V1.0-java.jar:vendor/framework/vendor.qti.hardware.fingerprint-V1.0-java.jar
