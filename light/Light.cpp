@@ -42,7 +42,7 @@
 #define NUBIA_LED_RED     48
 #define NUBIA_LED_GREEN   64
 
-#define BREATH_SOURCE_NONE			0x00
+#define BREATH_SOURCE_NONE		0x00
 #define BREATH_SOURCE_NOTIFICATION	0x01
 #define BREATH_SOURCE_BATTERY		0x02
 #define BREATH_SOURCE_BUTTONS		0x04
@@ -58,8 +58,6 @@
 #define BACK_LED_BATTERY_CHARGING  8
 #define BACK_LED_BATTERY_FULL      11
 #define BACK_LED_BATTERY_LOW       33
-
-static int32_t active_status = 0;
 
 enum battery_status {
     BATTERY_UNKNOWN = 0,
@@ -186,134 +184,82 @@ static void handleBacklight(const LightState& state) {
     set(LCD_LED, brightness);
 }
 
-static uint32_t setBreathLightLocked(uint32_t event_source, const LightState& state){
+static void handleNotification(const LightState& state) {
+
     uint32_t brightness = getScaledBrightness(state, MAX_LED_BRIGHTNESS);
 
-    if (brightness > 0) {
-        active_status |= event_source;
-    } else {
-        active_status &= ~event_source;
+    int32_t onMs = state.flashOnMs;
+    int32_t offMs = state.flashOffMs;
+
+    // Disable blinking to start. Turn off all colors of led
+    // disable green led
+    set(NUBIA_LED_COLOR, NUBIA_LED_GREEN);
+    set(NUBIA_LED_MODE, BLINK_MODE_OFF);
+    // disable red led
+    set(NUBIA_LED_COLOR, NUBIA_LED_RED);
+    set(NUBIA_LED_MODE, BLINK_MODE_OFF);
+    // set disable led
+    set(NUBIA_LED_COLOR, NUBIA_LED_DISABLE);
+    set(NUBIA_LED_MODE, BLINK_MODE_OFF);
+    set(NUBIA_FADE, "0 0 0");
+    set(NUBIA_GRADE, "100 255");
+    // turn off back led strip
+    set(BACK_LED_EFFECT_FILE, BACK_LED_OFF);
+
+    if (brightness <= 0)
+    {
+        return;
     }
 
-    if(active_status == 0) { //nothing, close all
-        // disable green led
+    if (onMs > 0 && offMs > 0) {
+	// Notification -- Set top led blink (green)
         set(NUBIA_LED_COLOR, NUBIA_LED_GREEN);
-        set(NUBIA_LED_MODE, BLINK_MODE_OFF);
-        // disable red led
-        set(NUBIA_LED_COLOR, NUBIA_LED_RED);
-        set(NUBIA_LED_MODE, BLINK_MODE_OFF);
-        // set disable led
-        set(NUBIA_LED_COLOR, NUBIA_LED_DISABLE);
-        set(NUBIA_LED_MODE, BLINK_MODE_OFF);
-        set(NUBIA_FADE, "0 0 0");
-        set(NUBIA_GRADE, "100 255");
-        // turn off back led strip
-        set(BACK_LED_EFFECT_FILE, BACK_LED_OFF);
+        set(NUBIA_FADE, "3 0 4");
+        set(NUBIA_GRADE, "0 100");
+        set(NUBIA_LED_MODE, BLINK_MODE_ON);
+	// Set back led strip breath (green)
+        set(BACK_LED_EFFECT_FILE, BACK_LED_NOTIFICATION);
+    } else {
+        // Get battery status
+        int battery_state = getBatteryStatus();
 
-        return 0;
-    }
-
-    if(active_status & BREATH_SOURCE_BATTERY) { //battery status
-	    int battery_state = getBatteryStatus();
-	    if(battery_state == BATTERY_CHARGING){
+	if(battery_state == BATTERY_CHARGING) {
+            // Charging -- Set top led light up (red)
             set(NUBIA_LED_COLOR, NUBIA_LED_RED);
             set(NUBIA_FADE, "0 0 0");
             set(NUBIA_GRADE, "100 255");
             set(NUBIA_LED_MODE, BLINK_MODE_CONST);
-	    // Set back led strip scrolling (green)
+            // Set back led strip scrolling (green)
             set(BACK_LED_EFFECT_FILE, BACK_LED_BATTERY_CHARGING);
-        }else if (battery_state == BATTERY_LOW){
+	}else if (battery_state == BATTERY_LOW) {
+            // Low -- Set top led blink (red)
             set(NUBIA_LED_COLOR, NUBIA_LED_RED);
-            set(NUBIA_FADE, "0 0 0");
-            set(NUBIA_GRADE, "100 255");
-            set(NUBIA_LED_MODE, BLINK_MODE_CONST);
-	    // Set back led strip blink(red)
+            set(NUBIA_FADE, "3 0 4");
+            set(NUBIA_GRADE, "0 100");
+            set(NUBIA_LED_MODE, BLINK_MODE_ON);
+            // Set back led strip blink(red)
             set(BACK_LED_EFFECT_FILE, BACK_LED_BATTERY_LOW);
-        }else if (battery_state == BATTERY_FULL){
+	}else if (battery_state == BATTERY_FULL) {
+            // Full -- Set top led light up (green)
             set(NUBIA_LED_COLOR, NUBIA_LED_GREEN);
             set(NUBIA_FADE, "0 0 0");
             set(NUBIA_GRADE, "100 255");
             set(NUBIA_LED_MODE, BLINK_MODE_CONST);
-	    // Set back led strip scrolling (rainbow)
+            // Set back led strip scrolling (rainbow)
             set(BACK_LED_EFFECT_FILE, BACK_LED_BATTERY_FULL);
-        }
-
-        return 0;
+	}
     }
-
-    if( (active_status & BREATH_SOURCE_NOTIFICATION ) || (active_status & BREATH_SOURCE_ATTENTION)) { //notification, set home breath
-        int32_t onMS = state.flashOnMs;
-        int32_t offMS = state.flashOffMs;
-        switch(onMS){
-        case 5000:
-            onMS = 5;
-            break;
-        case 2000:
-            onMS = 4;
-            break;
-        case 1000:
-            onMS = 3;
-            break;
-        case 500:
-            onMS = 2;
-            break;
-        case 250:
-            onMS = 1;
-            break;
-        default:
-            onMS = 1;
-        }
-
-        switch(offMS){
-        case 5000:
-            offMS = 5;
-            break;
-        case 2000:
-            offMS = 4;
-            break;
-        case 1000:
-            offMS = 3;
-            break;
-        case 500:
-            offMS = 2;
-            break;
-        case 250:
-            offMS = 1;
-            break;
-        case 1:
-            offMS = 0;
-            break;
-        default:
-            offMS = 0;
-        }
-        std::string fade_params = std::to_string(offMS) + " " + std::to_string(onMS) + " " + std::to_string(onMS);
-        set(NUBIA_LED_COLOR, NUBIA_LED_GREEN);
-        set(NUBIA_FADE, fade_params);
-        set(NUBIA_GRADE, "0 100");
-        set(NUBIA_LED_MODE, BLINK_MODE_ON);
-	// Set back led strip breath(green)
-        set(BACK_LED_EFFECT_FILE, BACK_LED_NOTIFICATION);
-    }
-    return 0;
 }
 
 static inline bool isLit(const LightState& state) {
     return state.color & 0x00ffffff;
 }
 
-static void handleNotification(const LightState& state) {
-    setBreathLightLocked(BREATH_SOURCE_NOTIFICATION, state);
-}
-
-static void handleBattery(const LightState& state){
-    setBreathLightLocked(BREATH_SOURCE_BATTERY, state);
-}
-
 /* Keep sorted in the order of importance. */
 static std::vector<LightBackend> backends = {
     { Type::ATTENTION, handleNotification },
     { Type::NOTIFICATIONS, handleNotification },
-    { Type::BATTERY, handleBattery },
+    { Type::BATTERY, handleNotification },
     { Type::BACKLIGHT, handleBacklight },
 };
 
