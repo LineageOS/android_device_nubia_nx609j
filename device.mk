@@ -53,7 +53,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.nx609j
+    android.hardware.light-service.nx609j
 
 # Permissions
 PRODUCT_COPY_FILES += \
