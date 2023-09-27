@@ -32,6 +32,9 @@ function blob_fixup() {
     vendor/lib64/libgoodixfingerprintd_binder.so)
         "${PATCHELF}" --add-needed "libbinder_shim.so" "${2}"
         ;;
+    vendor/lib64/android.hardware.gatekeeper@1.0.so | vendor/lib64/vendor.goodix.hardware.fingerprint@1.0.so)
+        "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
+        ;;
     esac
 }
 
