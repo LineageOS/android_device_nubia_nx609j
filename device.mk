@@ -77,7 +77,7 @@ PRODUCT_PACKAGES += \
 # libstdc++: camera.msm8998
 # libbinder_shim: libgoodixfingerprintd_binder.so
 PRODUCT_PACKAGES += \
-    libstdc++.vendor \
+    libstdc++_vendor \
     libbinder_shim
 
 PRODUCT_COPY_FILES += \
